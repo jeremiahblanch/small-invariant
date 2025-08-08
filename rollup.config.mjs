@@ -1,15 +1,15 @@
-import typescript from '@rollup/plugin-typescript';
-import replace from '@rollup/plugin-replace';
-import { terser } from 'rollup-plugin-terser';
+import replace from '@rollup/plugin-replace'
+import typescript from '@rollup/plugin-typescript'
+import { terser } from 'rollup-plugin-terser'
 
-const input = 'src/tiny-invariant.ts';
+const input = 'src/small-invariant.ts'
 
 export default [
   // Universal module definition (UMD) build
   {
     input,
     output: {
-      file: 'dist/tiny-invariant.js',
+      file: 'dist/small-invariant.js',
       format: 'umd',
       name: 'invariant',
     },
@@ -19,7 +19,7 @@ export default [
   {
     input,
     output: {
-      file: 'dist/tiny-invariant.min.js',
+      file: 'dist/small-invariant.min.js',
       format: 'umd',
       name: 'invariant',
     },
@@ -34,7 +34,7 @@ export default [
   {
     input,
     output: {
-      file: 'dist/tiny-invariant.esm.js',
+      file: 'dist/small-invariant.esm.js',
       format: 'esm',
     },
     plugins: [typescript({ module: 'ESNext' })],
@@ -43,7 +43,7 @@ export default [
   {
     input,
     output: {
-      file: 'dist/esm/tiny-invariant.js',
+      file: 'dist/esm/small-invariant.js',
       format: 'esm',
     },
     plugins: [
@@ -55,7 +55,7 @@ export default [
             fileName: 'package.json',
             source: `{ "type": "module" }\n`,
             type: 'asset',
-          });
+          })
         },
         name: 'emit-module-package-file',
       },
@@ -65,10 +65,10 @@ export default [
   {
     input,
     output: {
-      file: 'dist/tiny-invariant.cjs.js',
+      file: 'dist/small-invariant.cjs.js',
       format: 'cjs',
       exports: 'default',
     },
     plugins: [typescript({ module: 'ESNext' })],
   },
-];
+]
