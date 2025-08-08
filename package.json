@@ -12,7 +12,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/jeremiahblanch/small-invariant.git"
+    "url": "git+https://github.com/jeremiahblanch/small-invariant.git"
   },
   "bugs": {
     "url": "https://github.com/jeremiahblanch/small-invariant/issues"
